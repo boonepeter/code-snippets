@@ -31,4 +31,34 @@
       </Declarations>
     </Snippet>
   </CodeSnippet>
+  <CodeSnippet  Format="1.0.0">
+    <Header>
+      <Title>Event Trigger</Title>
+      <Shortcut>etrig</Shortcut>
+      <Description>Insert an Event Trigger</Description>
+    </Header>
+    <Snippet>
+      <Code Language="XAML">
+        <![CDATA[<i:EventTrigger EventName="$EventName$">
+                            <ei:CallMethodAction TargetObject="$TargetObject$" MethodName="$MethodName$"/>
+                        </i:EventTrigger>]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>EventName</ID>
+          <Default>Click</Default>
+          <ToolTip>Event Name (String)</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>MethodName</ID>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal>
+          <ID>TargetObject</ID>
+          <Default>{Binding}</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+
 </CodeSnippets>
