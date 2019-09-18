@@ -69,4 +69,75 @@
       </Declarations>
     </Snippet>
   </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Private/Public Observable Setting</Title>
+      <Shortcut>ppoos</Shortcut>
+    <Description>Use properties.settings.default to save user variables</Description>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private $type$ _$Name$ = Properties.Settings.Default.$Name$;
+                public $type$ $Name$
+                {
+                    get { return _$Name$; }
+                    set
+                    {
+                        if (value != _$Name$)
+                        {
+                            _$Name$ = value;
+                            OnPropertyChanged("$Name$");
+                            Properties.Settings.Default.$Name$ = value;
+                        }
+                    }
+                }]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>Name</ID>
+          <ToolTip>Variable name</ToolTip>
+          <Default>Name</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Void Click Event</Title>
+      <Shortcut>cv</Shortcut>
+      <Description>Creates a public void RoutedEventArgs event handler</Description>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[public void $MethodName$ (object sender, $RoutedEventArgs$ $args$)
+        {
+            $end$
+        }]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>MethodName</ID>
+          <ToolTip>Event Name</ToolTip>
+          <Default>EventName</Default>
+        </Literal>
+        <Literal>
+          <ID>RoutedEventArgs</ID>
+          <ToolTip>Type of event</ToolTip>
+          <Default>RoutedEventArgs</Default>
+        </Literal>
+        <Literal>
+          <ID>args</ID>
+          <ToolTip>variable name</ToolTip>
+          <Default>args</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+
 </CodeSnippets>
