@@ -15,7 +15,7 @@
                         if (value != _$Name$)
                         {
                             _$Name$ = value;
-                            OnPropertyChanged(nameof($Name$));
+                            RaisePropertyChanged();
                         }
                     }
                 }]]>
@@ -50,7 +50,7 @@
                         if (value != _$Name$)
                         {
                             _$Name$ = value;
-                            OnPropertyChanged(nameof($Name$));
+                            RaisePropertyChanged();
                         }
                     }
                 }]]>
@@ -86,7 +86,7 @@
                         if (value != _$Name$)
                         {
                             _$Name$ = value;
-                            OnPropertyChanged(nameof($Name$));
+                            RaisePropertyChanged();
                             Properties.Settings.Default.$Name$ = value;
                         }
                     }
