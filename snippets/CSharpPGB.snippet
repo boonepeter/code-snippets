@@ -176,4 +176,35 @@
       </Declarations>
     </Snippet>
   </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Observable Set</Title>
+      <Shortcut>os</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[private $type$ _$Name$;
+                public $type$ $Name$
+                {
+                    get => _$Name$;
+                    set => (ref _$Name$, value);
+                }]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>Name</ID>
+          <ToolTip>Variable name</ToolTip>
+          <Default>Name</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+
+
 </CodeSnippets>
